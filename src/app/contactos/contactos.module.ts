@@ -8,7 +8,6 @@ import { EditarComponent } from './components/editar/editar.component';
 import { TablaComponent } from './components/tabla/tabla.component';
 import { ContactosRoutingModule } from './contactos-routing.module';
 import { MaterialModule } from '../material/material.module';
-import { PrimengModule } from '../primeng/primeng.module';
 
 
 
@@ -24,7 +23,6 @@ import { PrimengModule } from '../primeng/primeng.module';
     CommonModule,
     ContactosRoutingModule,
     MaterialModule,
-    PrimengModule
   ]
 })
 export class ContactosModule { }

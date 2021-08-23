@@ -10,7 +10,6 @@ import { RemisionModule } from './remision/remision.module';
 import { MaterialModule } from './material/material.module';
 import { ContactosModule } from './contactos/contactos.module';
 import { AuthModule } from './auth/auth.module';
-import { PrimengModule } from './primeng/primeng.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -28,7 +27,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     ContactosModule,
     MaterialModule,
-    PrimengModule,
     RemisionModule
   ],
   providers: [],
