@@ -5,7 +5,6 @@ import { RemisionLandingComponent } from './landing/remision-landing/remision-la
 import { AgregarComponent }         from './components/agregar/agregar.component';
 import { EditarComponent }          from './components/editar/editar.component';
 import { TablaComponent }           from './components/tabla/tabla.component';
-import { AppRoutingModule } from '../app-routing.module';
 import { RemisionRoutingModule } from './remision-routing.module';
 
 @NgModule({
