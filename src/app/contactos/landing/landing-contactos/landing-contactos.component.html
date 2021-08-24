@@ -1,8 +1,15 @@
-<div fxLayout="column">
-  <div>
-    <h1>Landing Contactos</h1>
-  </div>
+<div>
+  <div fxFlexFill>
+    <h1>Contactos</h1>
+    <mat-divider></mat-divider>
+    <br>
 
+    <mat-form-field appearance="legacy">
+      <input matInput placeholder="Buscar...">
+    </mat-form-field>
+
+    <button mat-raised-button>Agregar contacto</button>
+  </div>
 </div>
 
 <app-tabla></app-tabla>
