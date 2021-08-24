@@ -1,6 +1,7 @@
 export interface Contacto {
-  nombre:   string;
+  id?     : string | null;
+  nombre  : string;
   apellido: string;
-  empresa:  string;
+  empresa : string;
   telefono: number;
 }
