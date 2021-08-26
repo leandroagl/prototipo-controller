@@ -3,11 +3,19 @@
     <h1>Contactos</h1>
     <mat-divider></mat-divider>
     <br>
+    <div fxLayout="row" fxLayoutAlign="space-around none">
 
-   <app-buscar></app-buscar>
+      <div>
+        <app-buscar></app-buscar>
+      </div>
 
-   <app-agregar></app-agregar>
+      <div>
+        <button mat-raised-button svgIcon="check" (click)="dialogOpen()">
+          Agregar contacto
+        </button>
+      </div>
 
+    </div>
   </div>
 </div>
 
