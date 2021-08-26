@@ -12,7 +12,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTableModule} from '@angular/material/table';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @NgModule({
   declarations: [],
@@ -30,7 +31,9 @@ import {MatTableModule} from '@angular/material/table';
     MatProgressBarModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    AngularSvgIconModule
   ]
 })
 export class MaterialModule { }
