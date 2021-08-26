@@ -1,2 +1,24 @@
-<button mat-raised-button>Agregar contacto</button>
+<div fxLayout="column">
+  <mat-form-field>
+    <input matInput placeholder="Nombre">
+  </mat-form-field>
 
+  <mat-form-field>
+    <input matInput placeholder="Apellido">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Teléfono">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Empresa">
+  </mat-form-field>
+
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close] >Cerrar</button>
+    <button mat-button [mat-dialog-close]="" cdkFocusInitial>Agregar</button>
+    <button mat-button [mat-dialog-close]="" cdkFocusInitial>Editar</button>
+  </div>
+
+</div>
