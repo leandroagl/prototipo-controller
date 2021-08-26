@@ -8,6 +8,8 @@ import { EditarComponent } from './components/editar/editar.component';
 import { TablaComponent } from './components/tabla/tabla.component';
 import { ContactosRoutingModule } from './contactos-routing.module';
 import { MaterialModule } from '../material/material.module';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { FlexModule } from '@angular/flex-layout';
 
 
 
@@ -18,11 +20,16 @@ import { MaterialModule } from '../material/material.module';
     BuscarComponent,
     EditarComponent,
     TablaComponent,
+    DialogComponent,
   ],
   imports: [
     CommonModule,
     ContactosRoutingModule,
     MaterialModule,
+    FlexModule
+  ],
+  providers: [
+    TablaComponent
   ]
 })
 export class ContactosModule { }
