@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AgregarComponent } from '../../components/agregar/agregar.component';
+
 
 @Component({
   selector: 'app-landing-contactos',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingContactosComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  dialogOpen() {
+    this.dialog.open(AgregarComponent)
   }
 
 }
