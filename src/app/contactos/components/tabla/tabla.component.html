@@ -25,6 +25,18 @@
     <td mat-cell *matCellDef="let element"> {{element.empresa}} </td>
   </ng-container>
 
+  <ng-container matColumnDef="editar-eliminar">
+    <th mat-header-cell *matHeaderCellDef> Editar - Eliminar </th>
+    <td mat-cell *matCellDef="let element">
+      <i (click)="dialogOpen()">
+        <mat-icon>edit</mat-icon>
+      </i>
+      <i>
+        <mat-icon>delete</mat-icon>
+      </i>
+    </td>
+  </ng-container>
+
   <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

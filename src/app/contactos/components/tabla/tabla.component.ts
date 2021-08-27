@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+import { AgregarComponent } from '../agregar/agregar.component';
 import { Contacto } from '../../interface/contacto.interface';
 import { ContactosService } from '../../services/contactos-service.service';
 
@@ -12,6 +14,11 @@ import { ContactosService } from '../../services/contactos-service.service';
   margin-top: 20px;
 }
 
+mat-icon {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
 .example-table-container {
   position: relative;
   min-height: 200px;
@@ -19,14 +26,17 @@ import { ContactosService } from '../../services/contactos-service.service';
   overflow: auto;
   `]
 })
+
 export class TablaComponent implements OnInit {
 
   contactos: Contacto[] = [];
-  displayedColumns: string[] = ['nombre', 'apellido', 'telefono', 'empresa'];
+  displayedColumns: string[] = ['nombre', 'apellido', 'telefono', 'empresa', 'editar-eliminar'];
 
-  contacto = new MatTableDataSource(this.contactos)
+  editar: boolean = false;
 
-  constructor(private _contactoService: ContactosService) {
+  constructor(
+    private _contactoService: ContactosService,
+    private dialog          : MatDialog) {
   }
 
   ngOnInit(): void {
@@ -35,10 +45,15 @@ export class TablaComponent implements OnInit {
 
   getContactos() {
     this._contactoService.getContactos()
-    .subscribe(resp => {
-      this.contactos = resp;
-    })
+      .subscribe(resp => {
+        this.contactos = resp;
+      })
   }
 
+  dialogOpen() {
+    this.editar = true;
+    this.dialog.open(AgregarComponent)
+
+  }
 
 }
