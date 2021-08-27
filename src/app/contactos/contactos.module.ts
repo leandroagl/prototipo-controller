@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { LandingContactosComponent } from './landing/landing-contactos/landing-contactos.component';
 import { AgregarComponent } from './components/agregar/agregar.component';
@@ -26,7 +27,8 @@ import { FlexModule } from '@angular/flex-layout';
     CommonModule,
     ContactosRoutingModule,
     MaterialModule,
-    FlexModule
+    FlexModule,
+    FormsModule
   ],
   providers: [
     TablaComponent
