@@ -1,24 +1,57 @@
 <div fxLayout="column">
+  <h1 mat-dialog-title *ngIf="">Agregar - Editar</h1>
+  <mat-divider></mat-divider>
+  <br>
   <mat-form-field>
-    <input matInput placeholder="Nombre">
+    <input matInput
+           placeholder="Nombre"
+           [(ngModel)]="contacto.nombre"
+           required>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Apellido">
+    <input matInput
+           placeholder="Apellido"
+           [(ngModel)]="contacto.apellido"
+           required>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Teléfono">
+    <input matInput
+           type="number"
+           placeholder="Teléfono"
+           [(ngModel)]="contacto.telefono"
+           required>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Empresa">
+    <mat-label>Empresa</mat-label>
+    <mat-select [(ngModel)]="contacto.empresa"
+                required>
+      <mat-option *ngFor="let empresa of empresas"
+                  [value]="empresa.id">
+        {{empresa.desc}}
+      </mat-option>
+    </mat-select>
+    <!-- <input matInput
+           placeholder="Empresa"
+           [(ngModel)]="contacto.nombre"> -->
   </mat-form-field>
 
   <div mat-dialog-actions>
-    <button mat-button [mat-dialog-close] >Cerrar</button>
-    <button mat-button [mat-dialog-close]="" cdkFocusInitial>Agregar</button>
-    <button mat-button [mat-dialog-close]="" cdkFocusInitial>Editar</button>
+    <button mat-button [mat-dialog-close]>
+      <mat-icon>close</mat-icon>
+      Cerrar
+    </button>
+    <button mat-button
+            [mat-dialog-close]=""
+            cdkFocusInitial
+            color="warn"
+            (click)="guardar()">
+      <mat-icon>check</mat-icon>
+      Guardar
+    </button>
+
   </div>
 
 </div>
